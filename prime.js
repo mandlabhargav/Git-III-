@@ -1,8 +1,12 @@
-let num=21
-for(let i=1;i<=num;i++){
-    if(num%i){
-        return true;
+function prime(num){
+    if(num<=1){
+        return false;
     }
+    for(let i=2;i<=num**0.5;i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
 }
-return false
-Prime(13);
+console.log(prime(25))
